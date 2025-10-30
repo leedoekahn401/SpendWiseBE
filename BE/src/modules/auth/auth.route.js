@@ -7,6 +7,10 @@ import { USER_ROLE } from "../../common/consts/user-role.js";
 
 const authRouter = Router();
 
+authRouter.get("/test", (req, res) => {
+    res.json({ message: "Test" });
+});
+
 authRouter.post("/register", validBodyReq(authRegisterSchema), authRegister);
 authRouter.post("/login", validBodyReq(authLoginSchema), authLogin);
 

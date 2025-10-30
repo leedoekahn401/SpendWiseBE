@@ -14,9 +14,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use(jsonValidator)
+
 app.use("/api",router);
 
-app.use(jsonValidator)
 app.use(notFoundHandler)
 app.use(errorHandler)
 
