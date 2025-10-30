@@ -9,8 +9,10 @@ import jsonValidator from "./src/common/middlewares/json-valid.middleware.js";
 
 const app = express();
 
-
-app.use(cors());
+const corsOptions = {
+  origin: CLIENT_URL
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
 

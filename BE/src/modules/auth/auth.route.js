@@ -5,6 +5,7 @@ import validBodyReq from "../../common/middlewares/valid-body.middleware.js";
 import { authMiddleware, restrictTo } from "../../common/middlewares/auth.middleware.js";
 import { USER_ROLE } from "../../common/consts/user-role.js";
 
+
 const authRouter = Router();
 
 authRouter.get("/test", (req, res) => {
